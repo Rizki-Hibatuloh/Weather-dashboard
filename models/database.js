@@ -11,11 +11,11 @@ const getDB = async ({NODE_ENV}) => {
                 port: 5432,
                 database : 'weather_dashboard',
                 user: 'postgres',
-                password : ''
+                password : 'admin'
             });
         }else {
             db = massive({
-                connectionString: procces.env.DATABASE_URL
+                connectionString: process.env.DATABASE_URL
             });
         }
         console.log("Database connected!");

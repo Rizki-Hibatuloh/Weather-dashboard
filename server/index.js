@@ -8,6 +8,8 @@ const  app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false}));
 
+app.use("/api/cities", require("../api/cities.js"))
+
 app.listen(PORT, ()=> {
     console.log(`Server running at http://localhost:${PORT}`);
 })
